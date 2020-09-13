@@ -70,8 +70,8 @@ body{
 #pop-up{
 
     top: -400px;
-    animation: drop .5s ease forwards, swing 2s 2s ease-in forwards; 
-    transform-origin: 10px;
+    animation: drop .5s ease forwards, backflip 1s 1s ease-out forwards , swing 2s 3s ease-in forwards; 
+    transform-origin: 50px;
 }
 
 @keyframes drop{
@@ -85,6 +85,23 @@ body{
     100%{
         transform: translateY(650px);
         opacity: 1;
+    }
+}
+
+@keyframes backflip{
+
+    0%{
+        transform: translateY(650px) rotateX(0deg);
+    }
+    50%{
+        transform: translateY(700px) rotateX(270deg);
+    }
+    80%{
+        transform: translateY(650px) rotateX(320deg)
+    }
+    100%{
+        transform: translateY(650px) rotateX(360deg);
+
     }
 }
 
